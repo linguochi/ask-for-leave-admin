@@ -5,22 +5,20 @@
 </template>
 
 <script>
-    export default {
-        mounted () {
+  export default {
+    mounted() {
 
-        },
-        beforeDestroy () {
+    },
+    beforeDestroy() {
 
-        },
-        methods: {
-
-        }
-    };
+    },
+    methods: {},
+  };
 </script>
 
 <style>
-.app-main{
-    width: 100%;
-    height: 100%;
-}
+    .app-main {
+        width: 100%;
+        height: 100%;
+    }
 </style>

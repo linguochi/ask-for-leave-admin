@@ -7,16 +7,14 @@ import user from './modules/user';
 Vue.use(Vuex);
 
 const store = new Vuex.Store({
-    mutations: {
-        //
-    },
-    actions: {
-
-    },
-    modules: {
-        app,
-        user
-    }
+  mutations: {
+    //
+  },
+  actions: {},
+  modules: {
+    app,
+    user,
+  },
 });
 
 export default store;

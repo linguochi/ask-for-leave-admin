@@ -4,12 +4,12 @@
 <template>
     <div class="main" :class="{'main-hide-text': shrink}">
         <div class="sidebar-menu-con" :style="{width: shrink?'60px':'200px', overflow: shrink ? 'visible' : 'auto'}">
-            <shrinkable-menu 
-                :shrink="shrink"
-                :menu-list="menuList">
+            <shrinkable-menu
+                    :shrink="shrink"
+                    :menu-list="menuList">
                 <div slot="top" class="logo-con">
-                    <img v-show="!shrink"  src="../images/logo.jpg" key="max-logo" />
-                    <img v-show="shrink" src="../images/logo-min.jpg" key="min-logo" />
+                    <img v-show="!shrink" src="../images/logo.jpg" key="max-logo"/>
+                    <img v-show="shrink" src="../images/logo-min.jpg" key="min-logo"/>
                 </div>
             </shrinkable-menu>
         </div>
@@ -46,39 +46,39 @@
     </div>
 </template>
 <script>
-import Cookies from 'js-cookie';
-import shrinkableMenu from './main-components/shrinkable-menu/shrinkable-menu.vue';
+  import Cookies from 'js-cookie';
+  import shrinkableMenu from './main-components/shrinkable-menu/shrinkable-menu.vue';
 
-export default {
+  export default {
     components: {
-        shrinkableMenu
+      shrinkableMenu,
     },
-    data () {
-        return {
-            shrink: false,
-            userName: ''
-        };
+    data() {
+      return {
+        shrink: false,
+        userName: '',
+      };
     },
     computed: {
-        menuList () {
-            return this.$store.state.app.menuList;
-        }
+      menuList() {
+        return this.$store.state.app.menuList;
+      },
     },
     methods: {
-        init () {
-            this.userName = Cookies.get('user');
-        },
-        toggleClick () {
-            this.shrink = !this.shrink;
-        },
-        handleClickUserDropdown (name) {
-            this.$router.push({
-                name: 'login'
-            });
-        }
+      init() {
+        this.userName = Cookies.get('user');
+      },
+      toggleClick() {
+        this.shrink = !this.shrink;
+      },
+      handleClickUserDropdown(name) {
+        this.$router.push({
+          name: 'login',
+        });
+      },
     },
-    mounted () {
-        this.init();
-    }
-};
+    mounted() {
+      this.init();
+    },
+  };
 </script>

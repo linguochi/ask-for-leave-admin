@@ -3,17 +3,17 @@
 </style>
 <template>
     <div class="home-main">
-        
+
     </div>
 </template>
 
 <script>
-export default {
+  export default {
     name: 'home',
-    data () {
-        return {
-            //
-        };
-    }
-};
+    data() {
+      return {
+        //
+      };
+    },
+  };
 </script>

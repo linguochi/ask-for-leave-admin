@@ -5,7 +5,7 @@
 </template>
 
 <script>
-export default {
-    name: 'page2'
-};
+  export default {
+    name: 'page2',
+  };
 </script>
